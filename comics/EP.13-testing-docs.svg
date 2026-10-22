@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 840" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#101a33"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="840" fill="url(#bg)"/>
+  <polygon points="980,0 1060,0 760,840 680,840" fill="#22d3ee" opacity="0.04"/>
+  <polygon points="150,0 220,0 1040,840 970,840" fill="#a78bfa" opacity="0.03"/>
+
+  <rect x="20" y="14" width="92" height="36" rx="9" fill="#CE422B"/>
+  <text x="66" y="38" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff">EP.13</text>
+  <text x="126" y="40" font-size="26" font-weight="bold" fill="url(#titleGrad)">测试与文档</text>
+  <text x="1180" y="38" text-anchor="end" font-size="13" fill="#64748b">Rust 漫画剧场 · 霓虹墨 NEON INK</text>
+  <rect x="20" y="62" width="1160" height="2" rx="1" fill="url(#titleGrad)" opacity="0.6"/>
+
+  <g transform="translate(20,84)">
+    <rect width="572" height="361" rx="14" fill="#0e1730" stroke="#223055"/>
+    <polygon points="380,0 450,0 120,361 50,361" fill="#22d3ee" opacity="0.04"/>
+    <rect x="14" y="13" width="26" height="20" rx="6" fill="#22d3ee"/>
+    <text x="27" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#0b1220">1</text>
+    <text x="50" y="29" font-size="17" font-weight="bold" fill="#e2e8f0">困境：手点式验证</text>
+    <g transform="translate(52,110)">
+      <rect x="-19" y="14" width="38" height="22" rx="9" fill="#1d4ed8"/>
+      <circle cx="0" cy="-2" r="16" fill="#ffd9b3"/>
+      <path d="M-16,-2 L-11,-13 L-6,-4 L0,-14 L6,-4 L11,-13 L16,-2 Q0,-11 -16,-2 Z" fill="#f97316"/>
+      <circle cx="-5" cy="0" r="1.7" fill="#0b1220"/>
+      <circle cx="5" cy="0" r="1.7" fill="#0b1220"/>
+      <path d="M-3,5 q3,3 6,0" stroke="#0b1220" stroke-width="1.3" fill="none"/>
+    </g>
+    <polygon points="88,100 74,106 88,112" fill="#f8fafc"/>
+    <rect x="88" y="82" width="300" height="52" rx="10" fill="#f8fafc"/>
+    <text x="102" y="104" font-size="15" fill="#0b1220">改完代码全靠手点一遍，</text>
+    <text x="102" y="126" font-size="15" fill="#0b1220">这谁敢发布啊……</text>
+    <rect x="24" y="150" width="524" height="130" rx="8" fill="#0a0f1c" stroke="#22d3ee" stroke-opacity="0.35"/>
+    <text x="38" y="170" font-size="12.5" fill="#7dd3fc" font-family="'SF Mono',Consolas,monospace">fn normalize(raw: &amp;str) -&gt; String {</text>
+    <text x="38" y="188" font-size="12.5" fill="#7dd3fc" font-family="'SF Mono',Consolas,monospace">    raw.trim().to_lowercase()</text>
+    <text x="38" y="206" font-size="12.5" fill="#7dd3fc" font-family="'SF Mono',Consolas,monospace">}</text>
+    <text x="38" y="224" font-size="12.5" fill="#fbbf24" font-family="'SF Mono',Consolas,monospace">// 每次改完都手工跑一遍验证</text>
+    <text x="38" y="244" font-size="12.5" fill="#fbbf24" font-family="'SF Mono',Consolas,monospace">// 不可重复，回归全靠记忆力</text>
+    <text x="38" y="262" font-size="12.5" fill="#f472b6" font-family="'SF Mono',Consolas,monospace">// 编译器管不了业务规则的对错</text>
+    <rect x="24" y="294" width="524" height="48" rx="8" fill="#111a30" stroke="#1e2a44"/>
+    <rect x="24" y="294" width="4" height="48" rx="2" fill="#22d3ee"/>
+    <text x="40" y="315" font-size="13.5" fill="#e2e8f0">借用检查器管内存安全，管不了业务规则；</text>
+    <text x="40" y="335" font-size="13.5" fill="#94a3b8">测试把期望写成代码，每次改完自动重验。</text>
+  </g>
+
+  <g transform="translate(608,84)">
+    <rect width="572" height="361" rx="14" fill="#0e1730" stroke="#223055"/>
+    <polygon points="420,0 480,0 150,361 90,361" fill="#a78bfa" opacity="0.04"/>
+    <rect x="14" y="13" width="26" height="20" rx="6" fill="#a78bfa"/>
+    <text x="27" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#0b1220">2</text>
+    <text x="50" y="29" font-size="17" font-weight="bold" fill="#e2e8f0">揭秘：#[test] 的形状</text>
+    <g transform="translate(52,110)">
+      <rect x="-19" y="14" width="38" height="22" rx="9" fill="#cbd5e1"/>
+      <circle cx="0" cy="-2" r="16" fill="#ffd9b3"/>
+      <path d="M-16,-2 a16,16 0 0 1 32,0 q-3,-12 -16,-12 q-13,0 -16,12 z" fill="#e2e8f0"/>
+      <circle cx="-5" cy="0" r="4" fill="none" stroke="#94a3b8" stroke-width="1.4"/>
+      <circle cx="5" cy="0" r="4" fill="none" stroke="#94a3b8" stroke-width="1.4"/>
+      <path d="M-1,0 L1,0" stroke="#94a3b8" stroke-width="1.4"/>
+      <circle cx="-5" cy="0" r="1.4" fill="#0b1220"/>
+      <circle cx="5" cy="0" r="1.4" fill="#0b1220"/>
+      <path d="M-8,5 q8,7 16,0 q-2,7 -8,7 q-6,0 -8,-7 z" fill="#e2e8f0"/>
+    </g>
+    <polygon points="88,99 74,105 88,111" fill="#f8fafc"/>
+    <rect x="88" y="88" width="310" height="34" rx="10" fill="#f8fafc"/>
+    <text x="102" y="110" font-size="15" fill="#0b1220">一个 #[test]，就是一条测试。</text>
+    <rect x="32" y="134" width="104" height="28" rx="8" fill="#111a30" stroke="#22d3ee" stroke-opacity="0.5"/>
+    <text x="84" y="153" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#22d3ee">① #[test]</text>
+    <polygon points="154,148 146,144 146,152" fill="#64748b"/>
+    <rect x="164" y="134" width="104" height="28" rx="8" fill="#111a30" stroke="#a78bfa" stroke-opacity="0.5"/>
+    <text x="216" y="153" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#a78bfa">② cargo test</text>
+    <polygon points="286,148 278,144 278,152" fill="#64748b"/>
+    <rect x="296" y="134" width="104" height="28" rx="8" fill="#111a30" stroke="#f472b6" stroke-opacity="0.5"/>
+    <text x="348" y="153" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#f472b6">③ 并行执行</text>
+    <polygon points="418,148 410,144 410,152" fill="#64748b"/>
+    <rect x="428" y="134" width="104" height="28" rx="8" fill="#111a30" stroke="#f97316" stroke-opacity="0.5"/>
+    <text x="480" y="153" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#f97316">④ 报告结果</text>
+    <text x="38" y="182" font-size="12" fill="#94a3b8">cargo build 不编译测试，cargo test 才生成运行器</text>
+    <rect x="24" y="194" width="524" height="92" rx="8" fill="#0a0f1c" stroke="#a78bfa" stroke-opacity="0.35"/>
+    <text x="38" y="216" font-size="12.5" fill="#7dd3fc" font-family="'SF Mono',Consolas,monospace">#[test]</text>
+    <text x="38" y="236" font-size="12.5" fill="#7dd3fc" font-family="'SF Mono',Consolas,monospace">fn addition_works() {</text>
+    <text x="38" y="256" font-size="12.5" fill="#7dd3fc" font-family="'SF Mono',Consolas,monospace">    assert_eq!(2 + 2, 4);</text>
+    <text x="38" y="276" font-size="12.5" fill="#7dd3fc" font-family="'SF Mono',Consolas,monospace">}</text>
+    <rect x="24" y="300" width="524" height="46" rx="8" fill="#111a30" stroke="#1e2a44"/>
+    <rect x="24" y="300" width="4" height="46" rx="2" fill="#a78bfa"/>
+    <text x="40" y="320" font-size="13.5" fill="#e2e8f0">panic 即失败、正常返回即通过，默认并行执行；</text>
+    <text x="40" y="338" font-size="13.5" fill="#94a3b8">#[cfg(test)] 模块只在测试构建时编译。</text>
+  </g>
+
+  <g transform="translate(20,462)">
+    <rect width="572" height="361" rx="14" fill="#0e1730" stroke="#223055"/>
+    <polygon points="380,0 450,0 120,361 50,361" fill="#f472b6" opacity="0.04"/>
+    <rect x="14" y="13" width="26" height="20" rx="6" fill="#f472b6"/>
+    <text x="27" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#0b1220">3</text>
+    <text x="50" y="29" font-size="17" font-weight="bold" fill="#e2e8f0">实证：从单元到文档</text>
+    <g transform="translate(52,110)">
+      <rect x="-19" y="14" width="38" height="22" rx="9" fill="#7C3AED"/>
+      <circle cx="0" cy="-2" r="16" fill="#ffd9b3"/>
+      <path d="M-16,-2 a16,16 0 0 1 32,0 q-3,-13 -16,-13 q-13,0 -16,13 z" fill="#22d3ee"/>
+      <circle cx="15" cy="4" r="6.5" fill="#22d3ee"/>
+      <circle cx="-5" cy="0" r="1.7" fill="#0b1220"/>
+      <circle cx="5" cy="0" r="1.7" fill="#0b1220"/>
+      <path d="M-3,5 q3,3 6,0" stroke="#0b1220" stroke-width="1.3" fill="none"/>
+    </g>
+    <polygon points="88,100 74,106 88,112" fill="#f8fafc"/>
+    <rect x="88" y="82" width="300" height="52" rx="10" fill="#f8fafc"/>
+    <text x="102" y="104" font-size="15" fill="#0b1220">错误路径和文档示例，</text>
+    <text x="102" y="126" font-size="15" fill="#0b1220">也能交给机器自动验？</text>
+    <rect x="24" y="152" width="524" height="128" rx="8" fill="#0a0f1c" stroke="#f472b6" stroke-opacity="0.35"/>
+    <text x="38" y="174" font-size="12.5" fill="#7dd3fc" font-family="'SF Mono',Consolas,monospace">#[should_panic(expected = "输入不能为空")]</text>
+    <text x="38" y="192" font-size="12.5" fill="#7dd3fc" font-family="'SF Mono',Consolas,monospace">fn rejects_blank() { slugify("   "); }</text>
+    <text x="38" y="212" font-size="12.5" fill="#fbbf24" font-family="'SF Mono',Consolas,monospace">// tests/api.rs：从外部只调公开 API</text>
+    <text x="38" y="232" font-size="12.5" fill="#7dd3fc" font-family="'SF Mono',Consolas,monospace">/// assert_eq!(slugify("a b"), "a-b");</text>
+    <text x="38" y="254" font-size="12.5" fill="#34d399" font-family="'SF Mono',Consolas,monospace">// cargo test 连文档示例一起真跑</text>
+    <rect x="24" y="296" width="524" height="46" rx="8" fill="#111a30" stroke="#1e2a44"/>
+    <rect x="24" y="296" width="4" height="46" rx="2" fill="#f472b6"/>
+    <text x="40" y="316" font-size="13.5" fill="#e2e8f0">返回 Result 的测试可以用 ? 传播错误；</text>
+    <text x="40" y="334" font-size="13.5" fill="#94a3b8">/// 文档示例随 cargo test 运行，防止腐烂。</text>
+  </g>
+
+  <g transform="translate(608,462)">
+    <rect width="572" height="361" rx="14" fill="#0e1730" stroke="#223055"/>
+    <polygon points="420,0 480,0 150,361 90,361" fill="#f97316" opacity="0.04"/>
+    <rect x="14" y="13" width="26" height="20" rx="6" fill="#f97316"/>
+    <text x="27" y="28" text-anchor="middle" font-size="14" font-weight="bold" fill="#0b1220">4</text>
+    <text x="50" y="29" font-size="17" font-weight="bold" fill="#e2e8f0">结案：质量基线</text>
+    <g transform="translate(52,110)">
+      <rect x="-19" y="14" width="38" height="22" rx="9" fill="#cbd5e1"/>
+      <circle cx="0" cy="-2" r="16" fill="#ffd9b3"/>
+      <path d="M-16,-2 a16,16 0 0 1 32,0 q-3,-12 -16,-12 q-13,0 -16,12 z" fill="#e2e8f0"/>
+      <circle cx="-5" cy="0" r="4" fill="none" stroke="#94a3b8" stroke-width="1.4"/>
+      <circle cx="5" cy="0" r="4" fill="none" stroke="#94a3b8" stroke-width="1.4"/>
+      <path d="M-1,0 L1,0" stroke="#94a3b8" stroke-width="1.4"/>
+      <circle cx="-5" cy="0" r="1.4" fill="#0b1220"/>
+      <circle cx="5" cy="0" r="1.4" fill="#0b1220"/>
+      <path d="M-8,5 q8,7 16,0 q-2,7 -8,7 q-6,0 -8,-7 z" fill="#e2e8f0"/>
+    </g>
+    <polygon points="88,100 74,106 88,112" fill="#f8fafc"/>
+    <rect x="88" y="82" width="280" height="52" rx="10" fill="#f8fafc"/>
+    <text x="102" y="104" font-size="15" fill="#0b1220">测试不是写完就算，</text>
+    <text x="102" y="126" font-size="15" fill="#0b1220">要防脆、防腐、防偷懒。</text>
+    <rect x="24" y="154" width="96" height="26" rx="13" fill="#f97316"/>
+    <text x="72" y="172" text-anchor="middle" font-size="13" font-weight="bold" fill="#0b1220">⚠ 坑点</text>
+    <rect x="32" y="200" width="9" height="9" rx="2" fill="#f97316"/>
+    <text x="52" y="209" font-size="14" fill="#e2e8f0">测试依赖顺序或共享状态 → 并行翻车</text>
+    <rect x="32" y="228" width="9" height="9" rx="2" fill="#f97316"/>
+    <text x="52" y="237" font-size="14" fill="#e2e8f0">只测快乐路径，错误分支从不覆盖</text>
+    <rect x="32" y="256" width="9" height="9" rx="2" fill="#f97316"/>
+    <text x="52" y="265" font-size="14" fill="#e2e8f0">文档示例年久失修 → 文档测试兜底</text>
+    <rect x="24" y="290" width="524" height="50" rx="8" fill="#111a30" stroke="#1e2a44"/>
+    <rect x="24" y="290" width="4" height="50" rx="2" fill="#CE422B"/>
+    <text x="40" y="311" font-size="13.5" font-weight="bold" fill="#f97316">码叔总结</text>
+    <text x="40" y="331" font-size="13.5" fill="#e2e8f0">单元、集成、文档三层测试，构成可重复的质量基线。</text>
+  </g>
+
+  <text x="1180" y="832" text-anchor="end" font-size="11" fill="#475569">NEON INK · rust-tutorial · EP.13</text>
+</svg>

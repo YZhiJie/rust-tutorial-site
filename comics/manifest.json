@@ -1,0 +1,56 @@
+{
+  "series": "Rust 漫画剧场 · 霓虹墨 Neon Ink",
+  "version": "1.0.0",
+  "canvas": {
+    "width": 1200,
+    "height": 840
+  },
+  "panels": {
+    "count": 4,
+    "width": 572,
+    "height": 361
+  },
+  "characters": [
+    "像素酱",
+    "齿轮君",
+    "码叔"
+  ],
+  "parts": [
+    { "file": "guide/01-hello-rust.md", "label": "入门篇 · 01 第一个 Rust 程序" },
+    { "file": "guide/02-variables-types.md", "label": "入门篇 · 02 变量、类型与控制流" },
+    { "file": "guide/03-functions-modules.md", "label": "入门篇 · 03 函数、模块与 Cargo" },
+    { "file": "guide/04-ownership.md", "label": "核心篇 · 04 所有权、借用与生命周期" },
+    { "file": "guide/05-structs-enums.md", "label": "核心篇 · 05 结构体、枚举与模式匹配" },
+    { "file": "guide/06-collections.md", "label": "核心篇 · 06 集合与迭代器" },
+    { "file": "guide/07-traits-generics.md", "label": "抽象篇 · 07 trait、泛型与 trait 对象" },
+    { "file": "guide/08-errors.md", "label": "抽象篇 · 08 错误处理" },
+    { "file": "guide/09-smart-pointers.md", "label": "抽象篇 · 09 智能指针" },
+    { "file": "guide/10-concurrency.md", "label": "进阶篇 · 10 并发编程" },
+    { "file": "guide/11-async.md", "label": "进阶篇 · 11 异步编程" },
+    { "file": "guide/12-macros-unsafe.md", "label": "进阶篇 · 12 宏、unsafe 与 FFI" },
+    { "file": "guide/13-testing.md", "label": "工程篇 · 13 测试与文档" },
+    { "file": "guide/14-performance.md", "label": "工程篇 · 14 性能优化与工程化" },
+    { "file": "guide/15-cli-project.md", "label": "实战篇 · 15 CLI 工具" },
+    { "file": "guide/16-web-project.md", "label": "实战篇 · 16 axum Web 服务" },
+    { "file": "guide/17-wasm-project.md", "label": "实战篇 · 17 WASM 前端" }
+  ],
+  "episodes": [
+    { "ep": 1, "slug": "EP.01-hello-rust", "title": "第一行 Rust 代码", "part": "guide/01-hello-rust.md" },
+    { "ep": 2, "slug": "EP.02-variables-shadowing", "title": "变量、遮蔽与类型", "part": "guide/02-variables-types.md" },
+    { "ep": 3, "slug": "EP.03-functions-modules", "title": "函数、模块与 Cargo", "part": "guide/03-functions-modules.md" },
+    { "ep": 4, "slug": "EP.04-ownership-borrow", "title": "所有权与借用检查", "part": "guide/04-ownership.md" },
+    { "ep": 5, "slug": "EP.05-structs-enums-match", "title": "结构体、枚举与 match", "part": "guide/05-structs-enums.md" },
+    { "ep": 6, "slug": "EP.06-collections-iterators", "title": "集合与迭代器", "part": "guide/06-collections.md" },
+    { "ep": 7, "slug": "EP.07-traits-generics", "title": "trait 与泛型", "part": "guide/07-traits-generics.md" },
+    { "ep": 8, "slug": "EP.08-error-handling", "title": "错误处理的艺术", "part": "guide/08-errors.md" },
+    { "ep": 9, "slug": "EP.09-smart-pointers", "title": "智能指针家族", "part": "guide/09-smart-pointers.md" },
+    { "ep": 10, "slug": "EP.10-concurrency", "title": "无畏并发", "part": "guide/10-concurrency.md" },
+    { "ep": 11, "slug": "EP.11-async-await", "title": "异步与 await", "part": "guide/11-async.md" },
+    { "ep": 12, "slug": "EP.12-macros-unsafe", "title": "宏与 unsafe 边界", "part": "guide/12-macros-unsafe.md" },
+    { "ep": 13, "slug": "EP.13-testing-docs", "title": "测试与文档", "part": "guide/13-testing.md" },
+    { "ep": 14, "slug": "EP.14-performance", "title": "性能优化方法论", "part": "guide/14-performance.md" },
+    { "ep": 15, "slug": "EP.15-cli-project", "title": "实战：CLI 工具", "part": "guide/15-cli-project.md" },
+    { "ep": 16, "slug": "EP.16-web-project", "title": "实战：axum Web 服务", "part": "guide/16-web-project.md" },
+    { "ep": 17, "slug": "EP.17-wasm-project", "title": "实战：WASM 前端", "part": "guide/17-wasm-project.md" }
+  ]
+}
